@@ -46,7 +46,7 @@ export default function LandingBanner() {
 }
 
 function TopRow() {
-  const text: string[] = ["I'm", "Cristian."];
+  const text: string[] = [];
 
   return (
     <motion.span
@@ -55,13 +55,12 @@ function TopRow() {
       initial="initial"
       animate="animate"
     >
-      {[...text[0]].map((letter, idx) => (
+      {[text[0]].map((letter, idx) => (
         <motion.span key={idx} variants={letterAnimation}>
           {letter}
         </motion.span>
       ))}
-
-      {[...text[1]].map((letter, idx) => (
+      {[text[1]].map((letter, idx) => (
         <motion.span
           key={idx}
           variants={letterAnimation}
@@ -75,7 +74,7 @@ function TopRow() {
 }
 
 function BottomRows() {
-  const text: string[] = ["Ready to ", "level up your website?"];
+  const text: string[] = ["Ready to ", "level up ", "your website?"];
 
   return (
     <motion.span
@@ -84,11 +83,30 @@ function BottomRows() {
       initial="initial"
       animate="animate"
     >
-      {[...text].map((letter, idx) => (
-        <motion.span key={idx} variants={lineAnimation}>
-          {letter}
-        </motion.span>
-      ))}
+      <motion.span
+        className={styles.top}
+        variants={banner}
+        initial="initial"
+        animate="animate"
+      >
+        {[text[0]].map((letter, idx) => (
+          <motion.span key={idx} variants={letterAnimation}>
+            {letter}
+          </motion.span>
+        ))}
+        {[text[1]].map((letter, idx) => (
+          <motion.span
+            key={idx}
+            variants={letterAnimation}
+            className={styles.accent}
+          >
+            {letter}
+          </motion.span>
+        ))}
+      </motion.span>
+      <motion.span key={1} variants={lineAnimation}>
+        {"your website? "}
+      </motion.span>
     </motion.span>
   );
 }

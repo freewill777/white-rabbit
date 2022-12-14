@@ -1,4 +1,4 @@
-@import '~styles/utilities/palette.scss';
+@import "~styles/utilities/palette.scss";
 
 @mixin textScale {
   @media (max-width: 1920px) {
@@ -46,7 +46,7 @@
   h1 {
     position: relative;
     display: flex;
-    
+
     flex-direction: column;
     font-size: calc($size_138px);
     line-height: 1.25;
@@ -56,7 +56,8 @@
     .top {
       display: flex;
       height: fit-content;
-      overflow: hidden;
+      // overflow: hidden;
+      margin-top: 0.15625em;
 
       .accent {
         position: relative;
@@ -69,7 +70,7 @@
         //! Underline Animation
         &::after {
           position: absolute;
-          content: '';
+          content: "";
           bottom: 0.5vmin;
           left: 0;
           height: 1vmin;
