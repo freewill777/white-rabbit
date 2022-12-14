@@ -1,4 +1,4 @@
-import styles from './Tech.module.scss'
+import styles from "./Tech.module.scss";
 import {
   SiTypescript,
   SiJavascript,
@@ -26,9 +26,15 @@ import {
   SiPostgresql,
   SiStrapi,
   SiFirebase,
-} from 'react-icons/si'
+  SiJava,
+  SiAngularjs,
+  SiMix,
+  SiContentful,
+  SiAntdesign,
+  SiRedux,
+} from "react-icons/si";
 
-import { FaDatabase } from 'react-icons/fa'
+import { FaDatabase } from "react-icons/fa";
 
 export default function Tech() {
   return (
@@ -39,7 +45,10 @@ export default function Tech() {
           <SiTypescript /> TypeScript
         </span>
         <span>
-          <SiJavascript /> JavaScript (ES6)
+          <SiJavascript /> JavaScript
+        </span>
+        <span>
+          <SiJava /> Java
         </span>
         <span>
           <SiPython /> Python
@@ -56,60 +65,85 @@ export default function Tech() {
       </div>
       <div className={styles.row}>
         <h3>Libraries/Frameworks</h3>
-        <span>
-          <SiNextdotjs /> Next.js
-        </span>
-        <span>
-          <SiReact /> React
-        </span>
-        <span>
-          <SiDjango /> Django
-        </span>
-        <span>
-          <SiNodedotjs /> Node.js
-        </span>
-        <span>
-          <SiExpress /> Express
-        </span>
-        <span>
-          <FaDatabase /> Mongoose
-        </span>
-        <span>
-          <SiTailwindcss /> Tailwind
-        </span>
-        <span>
-          <SiSass /> Sass
-        </span>
-        <span>
-          <SiMaterialui /> MUI
-        </span>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "0.625em",
+          }}
+        >
+          <span>
+            <SiReact /> React Native
+          </span>
+          <span>
+            <SiNextdotjs /> Next.js
+          </span>
+          <span>
+            <SiMix /> Remix
+          </span>
+          <span>
+            <SiReact /> React
+          </span>
+          <span>
+            <SiAngularjs /> Angular
+          </span>
+          <span>
+            <SiNodedotjs /> Node.js
+          </span>
+          <span>
+            <SiExpress /> Express
+          </span>
+          <span>
+            <FaDatabase /> Mongoose
+          </span>
+          <span>
+            <SiTailwindcss /> Tailwind
+          </span>
+          <span>
+            <SiSass /> Sass
+          </span>
+          <span>
+            <SiMaterialui /> Material UI
+          </span>
+          <span>
+            <SiContentful /> Contentful
+          </span>
+          <span>
+            <SiAntdesign /> Ant Design
+          </span>
+          <span>
+            <SiRedux /> Redux
+          </span>
+        </div>
       </div>
       <div className={styles.row}>
         <h3>Tools/Platforms</h3>
-        <span>
-          <SiGit /> Git
-        </span>
-        <span>
-          <SiGithub /> GitHub
-        </span>
-        <span>
-          <SiVercel /> Vercel
-        </span>
-        <span>
-          <SiHeroku /> Heroku
-        </span>
-        <span>
-          <SiNetlify /> Netlify
-        </span>
-        <span>
-          <SiVisualstudiocode /> VS Code
-        </span>
-        <span>
-          <SiVisualstudio /> Visual Studio
-        </span>
-        <span>
-          <SiFigma /> Figma
-        </span>
+        <div>
+          <span>
+            <SiGit /> Git
+          </span>
+          <span>
+            <SiGithub /> GitHub
+          </span>
+          <span>
+            <SiVercel /> Vercel
+          </span>
+          <span>
+            <SiHeroku /> Heroku
+          </span>
+          <span>
+            <SiNetlify /> Netlify
+          </span>
+          <span>
+            <SiVisualstudiocode /> VS Code
+          </span>
+          <span>
+            <SiVisualstudio /> Visual Studio
+          </span>
+          <span>
+            <SiFigma /> Figma
+          </span>
+        </div>
       </div>
       <div className={styles.row}>
         <h3>Databases</h3>
@@ -127,5 +161,5 @@ export default function Tech() {
         </span>
       </div>
     </section>
-  )
+  );
 }

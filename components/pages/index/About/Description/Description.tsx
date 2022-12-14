@@ -1,17 +1,17 @@
 //* === Components === *//
-import Link from 'next/link'
-import { RiArrowRightCircleFill } from 'react-icons/ri'
+import Link from "next/link";
+import { RiArrowRightCircleFill } from "react-icons/ri";
 
 //* === Styles & Utils === *//
-import { motion, Variants } from 'framer-motion'
-import styles from './Description.module.scss'
+import { motion, Variants } from "framer-motion";
+import styles from "./Description.module.scss";
 
 interface Props {
-  timeline: Variants
+  timeline: Variants;
   animation: {
-    lineAnimation: Variants
-    buttonAnimation: Variants
-  }
+    lineAnimation: Variants;
+    buttonAnimation: Variants;
+  };
 }
 
 export default function Description({ timeline, animation }: Props) {
@@ -20,29 +20,32 @@ export default function Description({ timeline, animation }: Props) {
       <motion.p
         variants={timeline}
         initial="initial"
-        whileInView={'animate'}
+        whileInView={"animate"}
         viewport={{ once: true }}
       >
         <motion.span variants={animation.lineAnimation}>
-          Hello, I{"'"}m a full stack web developer with a passion for
-          programming and an eye for design.
+          Don{"'"}t settle for a mediocre website - let us create a custom,
+          cutting-edge design for you! Contact us now.
         </motion.span>
       </motion.p>
       <motion.p
         variants={timeline}
         initial="initial"
-        whileInView={'animate'}
+        whileInView={"animate"}
         viewport={{ once: true }}
       >
         <motion.span variants={animation.lineAnimation}>
-          When I{"'"}m not programming, you can find me with a guitar in hand,
-          trekking through the city, or building sand castles with moats.
+          We can help you bring your vision to life, whether you need a simple
+          brochure website or a complex e-commerce platform, using the latest
+          technologies and tools to ensure that your website is fast, secure,
+          and scalable. Ask me about ongoing support and maintenance to keep
+          your products running smoothly.
         </motion.span>
       </motion.p>
       <motion.p
         variants={timeline}
         initial="initial"
-        whileInView={'animate'}
+        whileInView={"animate"}
         viewport={{ once: true }}
       >
         <motion.span
@@ -61,5 +64,5 @@ export default function Description({ timeline, animation }: Props) {
         </motion.span>
       </motion.p>
     </div>
-  )
+  );
 }

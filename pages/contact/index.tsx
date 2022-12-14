@@ -1,5 +1,5 @@
-import PageBanner from '@/components/common/PageBanner/PageBanner'
-import Layout from '@/components/layout/Layout'
+import PageBanner from "@/components/common/PageBanner/PageBanner";
+import Layout from "@/components/layout/Layout";
 
 export default function index() {
   return (
@@ -7,9 +7,9 @@ export default function index() {
       <PageBanner
         title="Contact"
         description="Always welcome to talk! Reach me through these means: "
-        github={'https://github.com/mauLovera'}
-        linkedIn={'https://www.linkedin.com/in/mauriciolovera001/'}
+        github={"https://github.com/freewill777"}
+        linkedIn={"https://www.linkedin.com/in/cristian-sfetcu/"}
       />
     </Layout>
-  )
+  );
 }

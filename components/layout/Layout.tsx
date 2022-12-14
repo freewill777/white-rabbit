@@ -1,18 +1,18 @@
 //* === Components === *//
-import Head from 'next/head'
-import Header from '@/components/layout/Header/Header'
-import Footer from '@/components/layout/Footer/Footer'
+import Head from "next/head";
+import Header from "@/components/layout/Header/Header";
+import Footer from "@/components/layout/Footer/Footer";
 
 //* === Styles & Utils === *//
-import styles from './Layout.module.scss'
+import styles from "./Layout.module.scss";
 
-import { ReactNode } from 'react'
+import { ReactNode } from "react";
 interface Props {
-  title: string
-  description: string
-  keywords: string
-  children: ReactNode
-  home: boolean
+  title: string;
+  description: string;
+  keywords: string;
+  children: ReactNode;
+  home: boolean;
 }
 
 export default function Layout({
@@ -34,12 +34,12 @@ export default function Layout({
       <main className={styles.container}>{children}</main>
       <Footer />
     </>
-  )
+  );
 }
 
 Layout.defaultProps = {
-  title: 'Mauricio Lovera | Full Stack Web Developer',
+  title: "Cristian Sfetcu | Full Stack Web Developer",
   description:
-    'Portfolio website for Mauricio Lovera | Full Stack Web Developer',
-  keywords: 'portfolio, full stack, web developer',
-}
+    "Business website for Cristian Sfetcu | Full Stack Web Developer",
+  keywords: "portfolio, full stack, web developer",
+};

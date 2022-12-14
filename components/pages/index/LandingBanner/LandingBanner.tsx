@@ -1,6 +1,6 @@
 //* === Styles & Utils === *//
-import styles from './LandingBanner.module.scss'
-import { motion } from 'framer-motion'
+import styles from "./LandingBanner.module.scss";
+import { motion } from "framer-motion";
 
 //* === Variants === //
 const banner = {
@@ -10,7 +10,7 @@ const banner = {
       staggerChildren: 0.1,
     },
   },
-}
+};
 const letterAnimation = {
   initial: { y: 400 },
   animate: {
@@ -20,7 +20,7 @@ const letterAnimation = {
       duration: 1,
     },
   },
-}
+};
 
 const lineAnimation = {
   initial: { y: 650 },
@@ -32,7 +32,7 @@ const lineAnimation = {
       delay: 2,
     },
   },
-}
+};
 
 export default function LandingBanner() {
   return (
@@ -42,11 +42,11 @@ export default function LandingBanner() {
         <BottomRows />
       </motion.h1>
     </section>
-  )
+  );
 }
 
 function TopRow() {
-  const text: string[] = ["I'm", 'Mauricio.']
+  const text: string[] = ["I'm", "Cristian."];
 
   return (
     <motion.span
@@ -71,11 +71,11 @@ function TopRow() {
         </motion.span>
       ))}
     </motion.span>
-  )
+  );
 }
 
 function BottomRows() {
-  const text: string[] = ['A full stack web', 'developer based', 'in Miami.']
+  const text: string[] = ["Ready to ", "level up your website?"];
 
   return (
     <motion.span
@@ -90,5 +90,5 @@ function BottomRows() {
         </motion.span>
       ))}
     </motion.span>
-  )
+  );
 }

@@ -1,20 +1,20 @@
 //* === Components === *//
-import Link from 'next/link'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import ActiveLink from '@/components/common/ActiveLink/ActiveLink'
+import Link from "next/link";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import ActiveLink from "@/components/common/ActiveLink/ActiveLink";
 
 //* === Styles & Utils === *//
-import { motion } from 'framer-motion'
-import { useState } from 'react'
-import styles from './Header.module.scss'
+import { motion } from "framer-motion";
+import { useState } from "react";
+import styles from "./Header.module.scss";
 
 //* === Variants * === //
 const timeline = {
   animate: {},
-}
+};
 
 interface Props {
-  home: boolean
+  home: boolean;
 }
 
 export default function Header({ home }: Props) {
@@ -28,12 +28,12 @@ export default function Header({ home }: Props) {
         delay: home ? 1.5 : 0,
       },
     },
-  }
+  };
 
-  const [active, setActive] = useState<boolean>(false)
+  const [active, setActive] = useState<boolean>(false);
 
   function handleClick() {
-    setActive(!active)
+    setActive(!active);
   }
 
   return (
@@ -45,22 +45,26 @@ export default function Header({ home }: Props) {
         transition={{ delay: home ? 2 : 0 }}
       >
         <motion.div className={styles.name} variants={lineAnimation}>
-          <Link href={'/'}>Mauricio Lovera</Link>
+          <ActiveLink text="Cristian Sfetcu" url="/" ammount="1" />
         </motion.div>
         <motion.div className={styles.title} variants={lineAnimation}>
-          <span>Full Stack Web Developer</span>
-          <Link href={'https://github.com/mauLovera'}>
+          <span>Software engineer / Web Developer / </span>
+          <Link href={"https://github.com/freewill777"}>
             <FaGithub />
           </Link>
-          <Link href={'https://www.linkedin.com/in/mauriciolovera001/'}>
+          <Link href={"https://www.linkedin.com/in/cristian-sfetcu/"}>
             <FaLinkedin />
           </Link>
         </motion.div>
-        <motion.div className={styles.links} variants={lineAnimation}>
-          <ActiveLink text="Home" url="" />
-          <ActiveLink text="Projects" url="projects" ammount="4" />
-          <ActiveLink text="About" url="about" />
-          <ActiveLink text="Contact" url="contact" />
+        <motion.div
+          className={styles.links}
+          style={{ marginRight: "10px" }}
+          variants={lineAnimation}
+        >
+          <ActiveLink text="Home" url="" ammount="1" />
+          {/* <ActiveLink text="Projects" url="projects" ammount="4" /> */}
+          <ActiveLink text="About" url="about" ammount="2" />
+          <ActiveLink text="Contact" url="contact" ammount="3" />
         </motion.div>
         <motion.div className={styles.menu} variants={lineAnimation}>
           <span onClick={() => handleClick()}>Menu</span>
@@ -68,19 +72,19 @@ export default function Header({ home }: Props) {
             className={styles.navigation}
             style={
               active
-                ? { display: 'flex' }
-                : { display: 'none', background: 'transparent' }
+                ? { display: "flex" }
+                : { display: "none", background: "transparent" }
             }
           >
             <ActiveLink text="Home" url="" />
-            <ActiveLink text="Projects" url="projects" ammount="4" />
+            {/* <ActiveLink text="Projects" url="projects" ammount="4" /> */}
             <ActiveLink text="About" url="about" />
             <ActiveLink text="Contact" url="contact" />
             <div className={styles.icons}>
-              <Link href={'https://github.com/mauLovera'}>
+              <Link href={"https://github.com/freewill777"}>
                 <FaGithub />
               </Link>
-              <Link href={'https://www.linkedin.com/in/mauriciolovera001/'}>
+              <Link href={"https://www.linkedin.com/in/cristian-sfetcu/"}>
                 <FaLinkedin />
               </Link>
             </div>
@@ -91,5 +95,5 @@ export default function Header({ home }: Props) {
         </motion.div>
       </motion.nav>
     </header>
-  )
+  );
 }
