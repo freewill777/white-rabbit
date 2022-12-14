@@ -1,8 +1,8 @@
 @import "~styles/utilities/_reset.scss";
 @import "~styles/utilities/_palette.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap");
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -11,14 +11,16 @@ body {
   @include ff-primary;
 
   padding-inline: $padding-large;
-  @media (max-width: 840px){
+  @media (max-width: 840px) {
     padding-inline: $padding-mid;
   }
-  @media (max-width: 600px){
+  @media (max-width: 600px) {
     padding-inline: $padding-small;
   }
 
   background-color: whitesmoke;
+  font-family: Manrope;
+  font-weight: 600;
 }
 
 p {
