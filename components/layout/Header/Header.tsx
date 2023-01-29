@@ -62,7 +62,7 @@ export default function Header({ home }: Props) {
           variants={lineAnimation}
         >
           <ActiveLink text="Home" url="" ammount="1" />
-          {/* <ActiveLink text="Projects" url="projects" ammount="4" /> */}
+          <ActiveLink text="Projects" url="projects" ammount="new" />
           <ActiveLink text="About" url="about" ammount="2" />
           <ActiveLink text="Contact" url="contact" ammount="3" />
         </motion.div>
@@ -77,7 +77,7 @@ export default function Header({ home }: Props) {
             }
           >
             <ActiveLink text="Home" url="" />
-            {/* <ActiveLink text="Projects" url="projects" ammount="4" /> */}
+            <ActiveLink text="Projects" url="projects" ammount="new" />
             <ActiveLink text="About" url="about" />
             <ActiveLink text="Contact" url="contact" />
             <div className={styles.icons}>

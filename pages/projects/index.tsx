@@ -13,16 +13,16 @@ export default function ProjectsPage() {
       <PageBanner
         title={'Projects'}
         description={
-          'A collection of my most notable projects and explorations in web development.'
+          'A curated collection of my most latest explorations in web development.'
         }
       />
       <div className={styles.list}>
         <Project
-          title="Grimoire"
-          description="A DnD 5th edition application used for searching through classes, monsters, and spells."
-          tech="Next.js / Sass / JavaScript / Vercel"
+          title="Logos"
+          description="Logo proposals for software development / pentesting SaaS."
+          tech="Art Direction, Branding, Illustration"
         />
-        <Project
+        {/* <Project
           title="Swirl"
           description="A music application that allows for creating and sharing playlists with other users."
           tech="Django / PostgreSQL / Docker / Heroku"
@@ -36,7 +36,7 @@ export default function ProjectsPage() {
           title="Tic-Tac-Toe"
           description="A rendition of the classic Tic-Tac-Toe game."
           tech="Next.js / TypeScript / Sass / Vercel"
-        />
+        /> */}
       </div>
     </Layout>
   )

@@ -13,7 +13,7 @@ export default function HomePage() {
     <Layout home={true}>
       <LandingBanner />
       <About />
-      {/* <SelectedProjects /> */}
+      <SelectedProjects />
     </Layout>
   );
 }
