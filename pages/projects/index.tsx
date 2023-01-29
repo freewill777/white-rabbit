@@ -1,25 +1,25 @@
 //* === Components === *//
-import Layout from '@/components/layout/Layout'
-import PageBanner from '@/components/common/PageBanner/PageBanner'
-import Project from '@/components/pages/projects/Project/Project'
+import Layout from "@/components/layout/Layout";
+import PageBanner from "@/components/common/PageBanner/PageBanner";
+import Project from "@/components/pages/projects/Project/Project";
 
 //* === Styles & Utils === *//
-import styles from '@/styles/pages/projects.module.scss'
+import styles from "@/styles/pages/projects.module.scss";
 
 interface Props {}
 export default function ProjectsPage() {
   return (
     <Layout home={false}>
       <PageBanner
-        title={'Projects'}
+        title={"Projects"}
         description={
-          'A curated collection of my most latest explorations in web development.'
+          "A curated collection of my most latest explorations in web development."
         }
       />
       <div className={styles.list}>
         <Project
           title="Logos"
-          description="Logo proposals for software development / pentesting SaaS."
+          description="Logo proposals for businesses & start-ups"
           tech="Art Direction, Branding, Illustration"
         />
         {/* <Project
@@ -39,5 +39,5 @@ export default function ProjectsPage() {
         /> */}
       </div>
     </Layout>
-  )
+  );
 }
