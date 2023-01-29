@@ -13,7 +13,7 @@ export default function ProjectsPage() {
       <PageBanner
         title={"Projects"}
         description={
-          "A curated collection of my most latest explorations in web development."
+          "A curated collection of my latest works in the web development field."
         }
       />
       <div className={styles.list}>
