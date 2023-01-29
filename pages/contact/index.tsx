@@ -9,6 +9,7 @@ export default function index() {
         description="Always welcome to talk! Reach me through these means: "
         github={"https://github.com/freewill777"}
         linkedIn={"https://www.linkedin.com/in/cristian-sfetcu/"}
+        phoneNumber={'+40 722 913 542'}
       />
     </Layout>
   );

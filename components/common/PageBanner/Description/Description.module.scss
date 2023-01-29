@@ -15,6 +15,10 @@
   }
 }
 
+.accent-clr {
+  color: $accent-clr;
+}
+
 .container {
   display: flex;
   gap: $size_16px;
@@ -36,6 +40,22 @@
 
     .link {
       text-decoration: underline;
+      display: flex;
+      gap: $size_4px;
+      align-items: baseline;
+      width: fit-content;
+      transition: $transition-speed;
+      svg {
+        display: flex;
+        align-items: center;
+      }
+
+      &:hover {
+        color: $accent-clr;
+      }
+    }
+
+    .item {
       display: flex;
       gap: $size_4px;
       align-items: baseline;

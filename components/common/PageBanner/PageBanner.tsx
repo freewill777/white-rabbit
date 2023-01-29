@@ -1,16 +1,17 @@
 //* === Components === *//
-import Description from './Description/Description'
-import SectionHeader from './SectionHeader/SectionHeader'
+import Description from "./Description/Description";
+import SectionHeader from "./SectionHeader/SectionHeader";
 
 //* === Styles & Utils. === *//
-import styles from './PageBanner.module.scss'
+import styles from "./PageBanner.module.scss";
 
 interface Props {
-  title: string
-  description: string
-  deployment?: string
-  github?: string
-  linkedIn?: string
+  title: string;
+  description: string;
+  deployment?: string;
+  github?: string;
+  linkedIn?: string;
+  phoneNumber?: string;
 }
 
 export default function PageBanner({
@@ -18,7 +19,8 @@ export default function PageBanner({
   description,
   deployment,
   github,
-  linkedIn
+  linkedIn,
+  phoneNumber
 }: Props) {
   return (
     <div className={styles.container}>
@@ -28,7 +30,8 @@ export default function PageBanner({
         deployment={deployment}
         github={github}
         linkedIn={linkedIn}
+        phoneNumber={phoneNumber}
       />
     </div>
-  )
+  );
 }
